@@ -1,84 +1,25 @@
-const quizform = document.querySelector('.quiz-form');
-var resultPanel = document.querySelector('.scoreboard');
-const correctAnswer = ['B', 'C', 'A', 'D', 'B'];
-
-
 function myfunction(event) {
 
-    event.preventDefault()
+    event.prevenDefault();
 
-    var userAnswer = [quizform.quiz1.value, quizform.quiz2.value, quizform.quiz3.value, quizform.quiz4.value, quizform.quiz5.value];
-    var score = 0;
+    const correctAnswer1 = "Id";
+    const correctAnswer2 = "float";
+    const correctAnswer3 = "default";
+    const correctAnswer4 = "class";
+    const correctAnswer5 = "link";
+    const checkAnswer1 = document.querySelector("choice.input[name='quiz1']:checked").value;
+    const checkAnswer2 = document.querySelector("input[name='quiz2']:checked").value;
+    const checkAnswer3 = document.querySelector("input[name='quiz3']:checked").value;
+    const checkAnswer4 = document.querySelector("input[name='quiz4']:checked").value;
+    const checkAnswer5 = document.querySelector("input[name='quiz5']:checked").value;
 
-
-    userAnswer.forEach((answer, index) => {
-        if (answer === correctAnswer[index]) {
-        score++;
-        }
-    })
-
-    console.log();
-    resultPanel = score;
-
-    if (document.getElementById(choice1-2).checked) {
-        score ++;
+    if (checkAnswer1 === correctAnswer1) {
+        const totalScore = document.getElementById('scorenumber');
+        totalScore.innerHTML = 5;
     }
         else {
-            score += 0;
+            const totalScore = document.getElementById('scorenumber');
+            totalScore.innerHTML = 0;
         }
-}
-/* function simpleQuiz(){
-
-
-}
-
-function submitAnswer() {
-
-
-}
-
-var container = document.querySelector('.container');
-var form = document.querySelector('quiz-form');
-var question = document.querySelector('.ques');
-var choices = document.querySelector('.all-choice');
-var button = document.querySelector('.submit-btn');
-var score = document.querySelector('.scoreboard .score-number')
-var qQuantity = document.querySelector('.scoreboard .q-quantity');
-
-var ques, answ;
-var choice = [];
-var score = 0;
-var qQuan = 0;
-
-
-function simpleQuiz(){
-
-
-}
-
-function submitAnswer() {
-
-    
-}
-
-
-window.addEventListener('DOMContentLoaded', quizApp);
-
-function quizApp() {
-    data = quiz();
-    ques = data[0].question;
-    choice = [];
-    answ = data[0].correct_answer;
-    data[0].incorrect_answers.map(choice => choice.push(option));
-    console.log(choice, answer);
-}
-
-async function quiz() {
-    var response ;
-    var data = response.json(); 
-
-    //console.log(data.results);
-    return data.results;
-}
-
-*/
+    alert(correctAnswer1.value);
+}   
